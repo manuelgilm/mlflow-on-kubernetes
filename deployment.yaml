@@ -44,20 +44,5 @@ spec:
               name: mlflow-backend-store
       volumes:
         - name: mlflow-backend-store
-          emptyDir: {}
----
-apiVersion: v1 
-kind: Service
-metadata:
-  name: mlflow-server
-  namespace: mlflow
-  labels:
-    app: mlflow-server
-spec:
-  ports:
-    - port: 5000
-      targetPort: 5000
-      protocol: TCP
-  selector:
-    app: mlflow-server          
+          emptyDir: {} 
     
